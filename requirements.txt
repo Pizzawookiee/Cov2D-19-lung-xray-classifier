@@ -1,5 +1,4 @@
 django
-os
 gunicorn
 django-heroku
 django-crispy-forms==1.9.1
