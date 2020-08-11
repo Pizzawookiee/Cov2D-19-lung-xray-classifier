@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<br>
+<div class="text-center">
+    <h1>Cov2D-19 Lung X-Ray Disease Classifier</h1>
+</div>
+
+
+<div class='text-center'>
+    <h4 style = 'fontfamily:verdana', 'font-size:100px'><b>Why Is This Tool Important?</b></h4>
+    <p style = 'fontfamily:verdana', 'font-size:30px'>Lung X-Ray scans are a common way of diagnosing severe respiratory illnesses.
+    With hospitals at or near full capacity, it is important for doctors to be able to accurately determine if a patient is sick.
+    <h4 style = 'fontfamily:verdana', 'font-size:100px'><b>What Does This Do?</b></h4>
+    <p style = 'fontfamily:verdana', 'font-size:30px'>
+    This machine learning model (a 2D convolutional neural network utilizing the DenseNet architecture through transfer learning) takes in X-Ray images and classifies them in one of five conditions:
+    </p>
+    <ul>
+        <li>Normal</li>
+	<li>COVID-19</li>
+	<li>Bacterial Pneumonia</li>
+	<li>Viral Pneumonia</li>
+	<li>Tuberculosis</li>
+    </ul>
+    <p style = 'fontfamily:verdana', 'font-size:30px'> This is meant to be used in conjunction with a COVID-19 test
+    (or that for an equivalent disease), not as a sole method of diagnosis. In our testing, this model was correct in every
+    COVID-19 prediction it made and had an 80 percent validation accuracy overall.
+    <h4 style = 'fontfamily:verdana', 'font-size:100px'><b>How Do I Use It?</b></h4>
+    <p style = 'fontfamily:verdana', 'font-size:30px'>
+    Click on the Classify tab, upload a lung X-Ray scan and wait for results.
+    The final prediction will be returned along with probability values for every one of the five conditions.
+    </p>
+</div>
+
+{% endblock %}
