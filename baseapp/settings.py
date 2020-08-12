@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '3wk#@k60w@mpai3tv6wk$sr7t+++bq
 #DEBUG = False
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['cov2d19-classifier.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
